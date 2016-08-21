@@ -64,6 +64,7 @@ class MlpCategorizer
     output_values = @classifier.feedforward(input_values)
     category_values = @category_dictionary.decode_multiple(output_values)
     return category_values
+#   @category_dictionary.decode_multiple(output_values)
   end
 
   def categorize(document, thresholds = {})
@@ -78,6 +79,7 @@ class MlpCategorizer
       return first_category
     else
       return nil
+#     nil
     end
   end
 end
